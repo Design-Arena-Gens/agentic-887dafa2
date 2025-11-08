@@ -1,0 +1,118 @@
+/* Global styles */
+:root {
+  --bg: #0b1020;
+  --card: #121a33;
+  --muted: #a0a8c3;
+  --text: #f5f7ff;
+  --accent: #5b8cff;
+  --accent-2: #9b6bff;
+  --border: #223056;
+}
+
+* { box-sizing: border-box; }
+html, body {
+  padding: 0;
+  margin: 0;
+  background: radial-gradient(1200px 800px at 20% -10%, #1a2447 0%, var(--bg) 55%), var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+a { color: inherit; text-decoration: none; }
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 0 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(91,140,255,0.2), rgba(155,107,255,0.2));
+  border: 1px solid rgba(91,140,255,0.35);
+  color: #d9e3ff;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.2px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.subtitle { color: var(--muted); font-size: 14px; }
+
+.grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.section {
+  grid-column: span 12 / span 12;
+}
+
+@media (min-width: 900px) {
+  .section-half { grid-column: span 6 / span 6; }
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+}
+
+.card h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 12px 0;
+  font-size: 18px;
+}
+
+.list { display: grid; gap: 10px; }
+
+.item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 12px;
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.name { font-weight: 700; letter-spacing: 0.2px; }
+
+.numbers {
+  display: inline-flex;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: #0e1530;
+  color: #e3e8ff;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.footer { margin: 28px 0 12px; color: var(--muted); font-size: 12px; text-align: center; }
